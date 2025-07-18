@@ -18,9 +18,6 @@ fat_sector_size equ 0x200
 fat_fat_count equ 2
 fat_reserved_sector_count equ 1  ; Only the boot sector.
 fat_hidden_sector_count equ 0  ; No sectors preceding the boot sector.
-%ifdef JUST_BS  ; Boot sector only.
-  %define P_1200K
-%endif
 %ifdef P_160K
   fat_sector_count equ 320
   fat_head_count equ 1
